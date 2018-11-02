@@ -1,0 +1,1 @@
+* Lab06 covers more complex file strucures, working with table, exporting R ouput, exporting plot images, and introduces us to piping.

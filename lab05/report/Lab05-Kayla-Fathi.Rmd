@@ -1,0 +1,68 @@
+---
+title: "Lab05-Kayla-Fathi"
+author: "Kayla Fathi"
+date: "9/27/2018"
+output: html_document
+---
+
+##### Packages to be used in this lab
+```{r}
+library(dplyr)
+library(ggplot2)
+```
+
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.path = '../images/')
+```
+
+### Filestructure and Shell Commands
+
+```{bash eval = FALSE}
+pwd
+cd Desktop
+mkdir lab05
+cd lab05
+mkdir data
+mkdir report
+mkdir images
+ls
+touch README.md
+ls
+cd data
+curl -O https://raw.githubusercontent.com/ucb-stat133/stat133-fall-2018/master/data/nba2018-players.csv
+ls
+wc nba2018-players.csv
+head nba2018-players.csv
+tail nba2018-players.csv
+```
+
+### NBA Players Data
+
+```{r}
+dat <- read.csv('Desktop/lab05/data/nba2018-players.csv', stringsAsFactors = FALSE)
+five_rows <- slice(dat, 1:5)
+five_rows
+
+```
+
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
